@@ -16,7 +16,7 @@ import math
 #     K += 1
 # print("Количество месяцев К:",K)
 # print("Итоговый размер вклада S:",S)
-# ---------------------------------------------------------------
+# # ---------------------------------------------------------------
 print("Задача 2")
 while True:
     try:
@@ -28,33 +28,33 @@ while True:
 while True:
     try:
         x1 = float(input("Введите х1: "))
-        if x1>x0:
-            break
-        else:
-            print("x1 должен быть быть больше х0. Попробуйте снова")
+        break
     except ValueError:
         print("Это не число. Попробуйте снова")
 
 while True:
     try:
         dx = float(input("Введите dx: "))
-        if dx>0:
-            break
-        else:
-            print("Шаг dx должен быть положительным.")
+        break
     except ValueError:
         print("Это не число. Попробуйте снова")
 
-x = x0
-while x < x1:
-    if x < 0:
-        z = x**2
-    elif 0 < x <= 1:
-        z = math.sin(x)
-    else:
-        z = math.cos(x)
-    print("z = ",z)
-    x += dx
+if x0 < x1 and dx > 0:
+    x = x0
+    while x < x1:
+        if x < 0:
+            z = x**2
+        elif 0 < x <= 1:
+            z = math.sin(x)
+        else:
+            z = math.cos(x)
+
+        x += dx
+        print("z =",z)
+elif x0 > x1 and dx < 0:
+    print(1)
+else:
+    print("ERROR")
  #-------------------------------------------------------------
 # print("Задача 3")
 # while True:
@@ -65,10 +65,17 @@ while x < x1:
 #         else:
 #             print("Вы ошиблись, это число не соответствует условию N > 0")
 #     except ValueError:
-#         print("Вы ошиблись, это не целое число")
+#         print("Вы ошиблись, это не число")
 #
-# last_del = 0
+# delenie = 0
 # while N > 0:
-#     last_del = N % 10
-#     print(last_del)
-#     N //= 10
+#     delenie = N % 10
+#     N = N // 10
+#     print(delenie)
+
+
+
+
+
+
+
