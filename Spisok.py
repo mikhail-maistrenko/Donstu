@@ -71,49 +71,49 @@ try:
 except ValueError:
     print("В строке должны быть только буквы, попробуйте снова ")
 ##############################################################
-# print("Задача 3")
-# while True:
-#     try:
-#         n = int(input("Введите размер списка: "))
-#         if n > 0:
-#             break
-#         else:
-#             print("Число должно быть больше нуля")
-#     except:
-#         print("Введите целое число.")
-#
-# numbers = []
-# for i in range(n):
-#     numbers.append(random.randint(-100, 100))
-# print(f"Исходный список: {numbers}")
-#
-# max_index = 0
-# max_abs = abs(numbers[0])
-#
-# for i in range(1, len(numbers)):
-#     temporary_abs = abs(numbers[i])
-#     if temporary_abs > max_abs:
-#         max_abs = temporary_abs
-#         max_index = i
-#
-# print(f"1) Максимальный по модулю элемент:")
-# print(f"numbers[{max_index}] = {numbers[max_index]}")
-# print(f"Модуль: {max_abs}")
-#
-# first_plus_index = -1
-# for i in range(len(numbers)):
-#     if numbers[i] > 0:
-#         first_plus_index = i
-#         break
-#
-# if first_plus_index == -1:
-#     print("2) В списке нет положительных элементов")
-#     sum_result = 0
-# else:
-#     sum_result = 0
-#     for i in range(first_plus_index + 1, len(numbers)):
-#         sum_result += numbers[i]
-#     print(f"2) Первый положительный элемент: numbers[{first_plus_index}] = {numbers[first_plus_index]}")
-#     print(f"Сумма элементов после него: {sum_result}")
+print("Задача 3")
+while True:
+    try:
+        n = int(input("Введите размер списка: "))
+        if n > 0:
+            break
+        else:
+            print("Число должно быть больше нуля")
+    except:
+        print("Введите целое число.")
+
+numbers = []
+for i in range(n):
+    numbers.append(random.randint(-100, 100))
+print(f"Исходный список: {numbers}")
+
+max_index = 0
+max_abs = abs(numbers[0])
+
+for i in range(1, len(numbers)):
+    temporary_abs = abs(numbers[i])
+    if temporary_abs > max_abs:
+        max_abs = temporary_abs
+        max_index = i
+
+print(f"1) Максимальный по модулю элемент:")
+print(f"numbers[{max_index}] = {numbers[max_index]}")
+print(f"Модуль: {max_abs}")
+
+first_plus_index = -1
+for i in range(len(numbers)):
+    if numbers[i] > 0:
+        first_plus_index = i
+        break
+
+if first_plus_index == -1:
+    print("2) В списке нет положительных элементов")
+    sum_result = 0
+else:
+    sum_result = 0
+    for i in range(first_plus_index + 1, len(numbers)):
+        sum_result += numbers[i]
+    print(f"2) Первый положительный элемент: numbers[{first_plus_index}] = {numbers[first_plus_index]}")
+    print(f"Сумма элементов после него: {sum_result}")
 
 
